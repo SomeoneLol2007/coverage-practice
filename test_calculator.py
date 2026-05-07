@@ -14,3 +14,15 @@ def test_subtract():
 def test_multiply():
     assert multiply(3, 4) == 12
     assert multiply(0, 100) == 0
+def test_divide():
+    assert divide(10, 2) == 5.0
+    assert divide(9, 3) == 3.0
+
+def test_divide_by_zero():
+    with pytest.raises(ValueError):
+        divide(10, 0)
+
+def test_is_even():
+    assert is_even(4) is True
+    assert is_even(7) is False
+    assert is_even(0) is True
